@@ -1,9 +1,16 @@
-import requests
-import concurrent.futures
-import time
-import os
-import colorama
-from colorama import Fore, Back, Style
+try:
+    import requests
+    import concurrent.futures
+    import time
+    import os
+    import colorama
+    from colorama import Fore, Back, Style
+except ModuleNotFoundError:
+    print("Please install all the required modules.")
+    print("Required modules: requests, colorama.")
+    print("You can install them by running 'pip install -r requirements.txt' in the command prompt.")
+    input("Press enter to exit.")
+    exit()
 
 colorama.init()
 
